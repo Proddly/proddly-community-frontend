@@ -1,28 +1,28 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Layers, Code, Rocket, Users, MessageSquare, Zap } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
-import blackImageOne from '../assets/black-image-one.jpg'
-import blackImageTwo from '../assets/black-image-two.jpg'
-import blackImageThree from '../assets/black-image-three.jpg'
-import blackImageFour from '../assets/black-image-four.jpg'
-import blackImageFive from '../assets/black-image-five.jpg'
-import blackImageSix from '../assets/black-image-six.jpg'
-import blackImageSeven from '../assets/black-image-seven.jpg'
-import blackImageEight from '../assets/black-image-eight.jpg'
-import blackImageNine from '../assets/black-image-nine.jpg'
+import blackImageOne from '/assets/optimized_black-image-one.webp'
+import blackImageTwo from '/assets/optimized_black-image-two.webp'
+import blackImageThree from '/assets/optimized_black-image-three.webp'
+import blackImageFour from '/assets/optimized_black-image-four.webp'
+import blackImageFive from '/assets/optimized_black-image-five.webp'
+import blackImageSix from '/assets/optimized_black-image-six.webp'
+import blackImageSeven from '/assets/optimized_black-image-seven.webp'
+import blackImageEight from '/assets/optimized_black-image-eight.webp'
+import blackImageNine from '/assets/optimized_black-image-nine.webp'
 
 // Avatar component for the visual
 const Avatar = ({ src, className, delay = 0 }: { src: string; className?: string; delay?: number }) => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}
-    animate={{ 
-      scale: 1, 
+    animate={{
+      scale: 1,
       opacity: 1,
       y: [0, -15, 5, -10, 0],
       x: [0, 10, -5, 8, 0],
       rotate: [0, 5, -5, 3, 0]
     }}
-    transition={{ 
+    transition={{
       scale: { type: "spring", stiffness: 260, damping: 20, delay },
       opacity: { duration: 0.5, delay },
       y: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: delay },
@@ -39,12 +39,12 @@ const Avatar = ({ src, className, delay = 0 }: { src: string; className?: string
 const FloatingBadge = ({ icon: Icon, text, className, delay = 0 }: { icon: any; text: string; className?: string; delay?: number }) => (
   <motion.div
     initial={{ scale: 0.8, opacity: 0 }}
-    animate={{ 
-      scale: 1, 
+    animate={{
+      scale: 1,
       opacity: 1,
-      y: [0, -10, 0] 
+      y: [0, -10, 0]
     }}
-    transition={{ 
+    transition={{
       scale: { type: "spring", stiffness: 200, damping: 20, delay },
       opacity: { duration: 0.5, delay },
       y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: delay + 0.5 }
@@ -69,7 +69,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          
+
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
@@ -83,7 +83,7 @@ export default function Hero() {
                   Become Products.
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
                 Join the ecosystem designed for execution. We provide the structure, mentorship, and community you need to validate your ideas and ship real products.
               </p>
@@ -118,12 +118,12 @@ export default function Hero() {
             className="flex-1 w-full max-w-2xl lg:max-w-none"
           >
             <div className="mobileHeroWrap relative h-80 w-70 md:w-full md:h-full lg:h-full lg:w-full aspect-square md:aspect-4/3 lg:aspect-square xl:aspect-4/3 bg-linear-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-2xl p-8 flex flex-col justify-between overflow-hidden group">
-              
+
               {/* Abstract UI Representation of Ecosystem */}
               <div className="grid grid-cols-2 gap-4 h-full relative z-10">
-                
+
                 {/* Ideation Stage */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 relative"
                 >
@@ -132,7 +132,7 @@ export default function Hero() {
                   </div>
                   <div className="text-sm font-bold text-gray-800 dark:text-gray-200">Ideation</div>
                   <div className="w-16 h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
-                  
+
                   {/* Community Elements */}
                   <Avatar src={blackImageOne} className="-top-4 -right-4" delay={0.4} />
                   <Avatar src={blackImageTwo} className="-bottom-4 -left-4" delay={0.5} />
@@ -141,7 +141,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Build Stage */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 mt-8 relative"
                 >
@@ -158,7 +158,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Launch Stage */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 -mt-8 relative"
                 >
@@ -175,7 +175,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Outcome Stage */}
-                <motion.div 
+                <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="outcomeContainer bg-[#0B1120] rounded-2xl shadow-lg 
                              p-4 sm:p-6 md:p-8 
@@ -184,33 +184,33 @@ export default function Hero() {
                 >
                   {/* Background Gradient Overlay */}
                   <div className="absolute inset-0 bg-linear-to-br from-primary-accent/20 to-transparent pointer-events-none" />
-                  
+
                   {/* Title - Responsive font sizing */}
                   <h3 className="text-lg sm:text-xl lg:text-3xl font-bold relative z-10 text-center">
                     Outcome
                   </h3>
-                  
+
                   {/* Description - Responsive text and line heights */}
                   <p className="text-[0.6rem] -mt-2 lg:mt-0 sm:text-sm text-gray-400 text-center relative z-10 leading-relaxed">
                     Real Products.<br className="hidden sm:block" /> Real Growth.
                   </p>
-                  
+
                   {/* Community Elements - Responsive Avatar sizes */}
                   <div className="flex -space-x-2 -mt-2 lg:mt-2 sm:mt-4 relative z-10">
-                    <img 
-                      src={blackImageEight} 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover" 
-                      alt="User avatar 1" 
+                    <img
+                      src={blackImageEight}
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover"
+                      alt="User avatar 1"
                     />
-                    <img 
-                      src={blackImageNine} 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover" 
-                      alt="User avatar 2" 
+                    <img
+                      src={blackImageNine}
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover"
+                      alt="User avatar 2"
                     />
-                    <img 
-                      src="https://randomuser.me/api/portraits/men/54.jpg" 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover" 
-                      alt="User avatar 3" 
+                    <img
+                      src="https://randomuser.me/api/portraits/men/54.jpg"
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover"
+                      alt="User avatar 3"
                     />
                   </div>
                 </motion.div>
@@ -218,35 +218,35 @@ export default function Hero() {
 
               {/* Connecting Lines (Decorative) */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <motion.path 
+                <motion.path
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
-                  d="M25,25 Q50,50 75,75" 
-                  stroke="currentColor" 
-                  strokeWidth="0.5" 
-                  fill="none" 
-                  className="text-primary-accent" 
+                  d="M25,25 Q50,50 75,75"
+                  stroke="currentColor"
+                  strokeWidth="0.5"
+                  fill="none"
+                  className="text-primary-accent"
                 />
-                <motion.path 
+                <motion.path
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
                   transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-                  d="M75,25 Q50,50 25,75" 
-                  stroke="currentColor" 
-                  strokeWidth="0.5" 
-                  fill="none" 
-                  className="text-secondary-accent" 
+                  d="M75,25 Q50,50 25,75"
+                  stroke="currentColor"
+                  strokeWidth="0.5"
+                  fill="none"
+                  className="text-secondary-accent"
                 />
               </svg>
 
               {/* Pulse Effects for "Aliveness" */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
-                 <motion.div 
-                   animate={{ scale: [1, 1.05, 1], opacity: [0.1, 0.2, 0.1] }}
-                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                   className="absolute inset-0 bg-linear-to-tr from-primary-accent/5 to-transparent rounded-3xl"
-                 />
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1], opacity: [0.1, 0.2, 0.1] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-linear-to-tr from-primary-accent/5 to-transparent rounded-3xl"
+                />
               </div>
             </div>
           </motion.div>
