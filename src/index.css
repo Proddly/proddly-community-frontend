@@ -65,7 +65,7 @@ body {
 
 /* Responsiveness */
 
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .mobileHeroWrap {
     width: 17rem;
     height: 23rem;
@@ -93,4 +93,54 @@ body {
   .outcomeContainer {
     height: 8rem;
   }
-} */
+}
+
+@media screen and (min-width: 426px) and (max-width: 599px) {
+  .mobileHeroWrap {
+    /* 1. Force the width and prevent ANY shrinking */
+    width: 30.1rem !important;
+    
+    /* 2. Kill Flexbox/Grid compression */
+    flex: 0 0 42rem !important; 
+    flex-grow: 1 !important;
+    
+    /* 3. Ensure height stays rigid */
+    height: 30rem !important;
+    min-height: 30rem !important;
+    
+    /* 4. Prevent internal content from collapsing the box */
+    display: block; 
+    overflow: visible; 
+  }
+
+  .outcomeContainer {
+    height: 12rem !important;
+    min-height: 12rem !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .mobileHeroWrap {
+    /* 1. Force the width and prevent ANY shrinking */
+    width: 42rem !important;
+    
+    /* 2. Kill Flexbox/Grid compression */
+    flex: 0 0 42rem !important; 
+    flex-shrink: 0 !important;
+    
+    /* 3. Ensure height stays rigid */
+    height: 30rem !important;
+    min-height: 30rem !important;
+    
+    /* 4. Prevent internal content from collapsing the box */
+    display: block; 
+    overflow: visible; 
+  }
+
+  .outcomeContainer {
+    height: 12rem !important;
+    min-height: 12rem !important;
+    flex-shrink: 0 !important;
+  }
+}
