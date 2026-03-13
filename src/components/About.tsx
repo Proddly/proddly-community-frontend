@@ -110,7 +110,7 @@ export default function About() {
       <Modal
         isOpen={!!selectedPillar}
         onClose={() => setSelectedPillar(null)}
-        title={selectedPillar?.title || ''} children={undefined}      >
+        title={selectedPillar?.title || ''}      >
         <p className="text-text-secondary leading-relaxed text-lg">
           {selectedPillar?.description}
         </p>

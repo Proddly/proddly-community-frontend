@@ -112,7 +112,7 @@ export default function Membership() {
       <Modal
         isOpen={showBuilderPathsModal}
         onClose={() => setShowBuilderPathsModal(false)}
-        title="Builder Participation Paths" children={undefined}>
+        title="Builder Participation Paths">
         <p className="text-text-secondary mb-6">
           All individuals join the community as TPC Builders. Within the Builder layer there are two participation paths:
         </p>
@@ -132,7 +132,7 @@ export default function Membership() {
       <Modal
         isOpen={showPartnerPathsModal}
         onClose={() => setShowPartnerPathsModal(false)}
-        title="Partner Participation Paths" children={undefined}      >
+        title="Partner Participation Paths"      >
         <p className="text-text-secondary mb-6">
           Partners play a crucial role in supporting the ecosystem. There are four key ways to participate as a partner:
         </p>

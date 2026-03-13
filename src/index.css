@@ -65,7 +65,7 @@ body {
 
 /* Responsiveness */
 
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
   .mobileHeroWrap {
     width: 17rem;
     height: 23rem;
@@ -93,4 +93,4 @@ body {
   .outcomeContainer {
     height: 8rem;
   }
-}
+} */

@@ -80,7 +80,7 @@ export default function Programs() {
       <Modal
         isOpen={!!selectedProgram}
         onClose={() => setSelectedProgram(null)}
-        title={selectedProgram?.name || ''} children={undefined}      >
+        title={selectedProgram?.name || ''}      >
         <p className="text-primary-accent dark:text-secondary-accent font-medium text-lg mb-4">
           {selectedProgram?.tagline}
         </p>

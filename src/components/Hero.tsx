@@ -117,61 +117,61 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 w-full max-w-2xl lg:max-w-none"
           >
-            <div className="mobileHeroWrap relative h-80 w-70 md:w-full md:h-full lg:h-full lg:w-full aspect-square md:aspect-4/3 lg:aspect-square xl:aspect-4/3 bg-linear-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-2xl p-8 flex flex-col justify-between overflow-hidden group">
+            <div className="mobileHeroWrap relative min-h-[500px] sm:min-h-[600px] w-full md:h-full lg:h-full lg:w-full aspect-square md:aspect-4/3 lg:aspect-square xl:aspect-4/3 bg-linear-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-2xl p-4 sm:p-8 flex flex-col justify-between overflow-hidden group">
               
               {/* Abstract UI Representation of Ecosystem */}
-              <div className="grid grid-cols-2 gap-4 h-full relative z-10">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 h-full relative z-10">
                 
                 {/* Ideation Stage */}
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 relative"
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 relative"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
-                    <Layers size={24} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
+                    <Layers size={20} className="sm:w-6 sm:h-6" />
                   </div>
-                  <div className="text-sm font-bold text-gray-800 dark:text-gray-200">Ideation</div>
-                  <div className="w-16 h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+                  <div className="text-xs sm:text-sm font-bold text-gray-800 dark:text-gray-200">Ideation</div>
+                  <div className="w-12 sm:w-16 h-1.5 sm:h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
                   
                   {/* Community Elements */}
-                  <Avatar src={blackImageOne} className="-top-4 -right-4" delay={0.4} />
-                  <Avatar src={blackImageTwo} className="-bottom-4 -left-4" delay={0.5} />
-                  <Avatar src={blackImageThree} className="top-1/2 -right-6" delay={1.1} />
-                  <FloatingBadge icon={MessageSquare} text="Feedback" className="-right-16 top-2" delay={0.6} />
+                  <Avatar src={blackImageOne} className="-top-3 -right-3 sm:-top-4 sm:-right-4" delay={0.4} />
+                  <Avatar src={blackImageTwo} className="-bottom-3 -left-3 sm:-bottom-4 sm:-left-4" delay={0.5} />
+                  <Avatar src={blackImageThree} className="top-1/2 -right-4 sm:-right-6" delay={1.1} />
+                  <FloatingBadge icon={MessageSquare} text="Feedback" className="-right-12 sm:-right-16 top-2" delay={0.6} />
                 </motion.div>
 
                 {/* Build Stage */}
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 mt-8 relative"
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 mt-4 sm:mt-8 relative"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
-                    <Code size={24} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
+                    <Code size={20} className="sm:w-6 sm:h-6" />
                   </div>
-                  <div className="text-sm font-bold text-gray-800 dark:text-gray-200">Build</div>
-                  <div className="w-16 h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+                  <div className="text-xs sm:text-sm font-bold text-gray-800 dark:text-gray-200">Build</div>
+                  <div className="w-12 sm:w-16 h-1.5 sm:h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
 
                   {/* Community Elements */}
-                  <Avatar src={blackImageFour} className="-top-4 -left-4" delay={0.7} />
-                  <Avatar src={blackImageFive} className="bottom-8 -right-5" delay={1.2} />
-                  <FloatingBadge icon={Users} text="Collab" className="-left-12 bottom-4" delay={0.8} />
+                  <Avatar src={blackImageFour} className="-top-3 -left-3 sm:-top-4 sm:-left-4" delay={0.7} />
+                  <Avatar src={blackImageFive} className="bottom-6 sm:bottom-8 -right-4 sm:-right-5" delay={1.2} />
+                  <FloatingBadge icon={Users} text="Collab" className="-left-8 sm:-left-12 bottom-4" delay={0.8} />
                 </motion.div>
 
                 {/* Launch Stage */}
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 flex flex-col items-center justify-center gap-3 -mt-8 relative"
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 -mt-4 sm:-mt-8 relative"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
-                    <Rocket size={24} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-accent/10 dark:bg-primary-accent/20 flex items-center justify-center text-primary-accent dark:text-secondary-accent">
+                    <Rocket size={20} className="sm:w-6 sm:h-6" />
                   </div>
-                  <div className="text-sm font-bold text-gray-800 dark:text-gray-200">Launch</div>
-                  <div className="w-16 h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+                  <div className="text-xs sm:text-sm font-bold text-gray-800 dark:text-gray-200">Launch</div>
+                  <div className="w-12 sm:w-16 h-1.5 sm:h-2 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
 
                   {/* Community Elements */}
-                  <Avatar src={blackImageSix} className="-bottom-4 -right-4" delay={0.9} />
-                  <Avatar src={blackImageSeven} className="-top-3 left-4" delay={1.3} />
-                  <FloatingBadge icon={Zap} text="Traction" className="-right-10 top-0" delay={1.0} />
+                  <Avatar src={blackImageSix} className="-bottom-3 -right-3 sm:-bottom-4 sm:-right-4" delay={0.9} />
+                  <Avatar src={blackImageSeven} className="-top-3 sm:-top-3 left-2 sm:left-4" delay={1.3} />
+                  <FloatingBadge icon={Zap} text="Traction" className="-right-8 sm:-right-10 top-0" delay={1.0} />
                 </motion.div>
 
                 {/* Outcome Stage */}
@@ -179,24 +179,24 @@ export default function Hero() {
                   whileHover={{ scale: 1.02 }}
                   className="outcomeContainer bg-[#0B1120] rounded-2xl shadow-lg 
                              p-4 sm:p-6 md:p-8 
-                             flex flex-col items-center justify-center gap-3 
-                             text-white h-20 md:h-full lg:h-full relative overflow-hidden w-full max-w-sm mx-auto"
+                             flex flex-col items-center justify-center gap-2 sm:gap-3 
+                             text-white min-h-[140px] md:h-full lg:h-full relative overflow-hidden w-full max-w-sm mx-auto"
                 >
                   {/* Background Gradient Overlay */}
                   <div className="absolute inset-0 bg-linear-to-br from-primary-accent/20 to-transparent pointer-events-none" />
                   
                   {/* Title - Responsive font sizing */}
-                  <h3 className="text-sm -pt-2 lg:pt-0 lg:text-3xl font-bold relative z-10 text-center">
+                  <h3 className="text-lg sm:text-xl lg:text-3xl font-bold relative z-10 text-center">
                     Outcome
                   </h3>
                   
                   {/* Description - Responsive text and line heights */}
-                  <p className="text-[0.6rem] -mt-2 lg:mt-0 sm:text-sm text-gray-400 text-center relative z-10 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-400 text-center relative z-10 leading-relaxed">
                     Real Products.<br className="hidden sm:block" /> Real Growth.
                   </p>
                   
                   {/* Community Elements - Responsive Avatar sizes */}
-                  <div className="flex -space-x-2 -mt-2 lg:mt-2 sm:mt-4 relative z-10">
+                  <div className="flex -space-x-2 mt-2 sm:mt-4 relative z-10">
                     <img 
                       src={blackImageEight} 
                       className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-primary-dark object-cover" 
