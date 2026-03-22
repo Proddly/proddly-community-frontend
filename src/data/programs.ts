@@ -6,6 +6,7 @@ export interface Program {
   details: string[];
   schedule: string;
   cta: string;
+  link: string;
 }
 
 export const programs: Program[] = [
@@ -21,7 +22,8 @@ export const programs: Program[] = [
       "Learn validation frameworks"
     ],
     schedule: "2nd Saturday of every month",
-    cta: "Attend Build or Bust"
+    cta: "Attend Build or Bust",
+    link: "https://luma.com/build_or_bust" 
   },
   {
     id: "forge-lab",
@@ -35,7 +37,8 @@ export const programs: Program[] = [
       "Peer-to-peer consulting"
     ],
     schedule: "3rd Saturday of every month",
-    cta: "Enter Forge Lab"
+    cta: "Enter Forge Lab",
+    link: "https://luma.com/forge_lab"
   },
   {
     id: "ama-saturdays",
@@ -49,6 +52,7 @@ export const programs: Program[] = [
       "Focus on career and personal growth"
     ],
     schedule: "Last Saturday of every month",
-    cta: "Join the Next AMA"
+    cta: "Join the Next AMA",
+    link: "https://luma.com/ama_saturdays" 
   }
 ];

@@ -15,7 +15,7 @@ export default function Programs() {
 
   const handleCtaClick = (program: Program) => {
     trackEvent('program_cta_click', { program: program.name });
-    // Route to program registration
+    window.open(program.link, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -80,7 +80,7 @@ export default function Programs() {
       <Modal
         isOpen={!!selectedProgram}
         onClose={() => setSelectedProgram(null)}
-        title={selectedProgram?.name || ''}      >
+        title={selectedProgram?.name || ''}>
         <p className="text-primary-accent dark:text-secondary-accent font-medium text-lg mb-4">
           {selectedProgram?.tagline}
         </p>
@@ -107,7 +107,7 @@ export default function Programs() {
           </div>
           <button
             onClick={() => selectedProgram && handleCtaClick(selectedProgram)}
-            className="text-sm font-bold text-white bg-primary-accent px-4 py-2 rounded-md hover:bg-primary-accent/90 transition-colors flex items-center gap-1"
+            className="text-sm font-bold text-white bg-primary-accent px-4 py-2 rounded-md hover:bg-primary-accent/90 transition-colors flex items-center gap-1 cursor-pointer"
           >
             {selectedProgram?.cta} <ArrowRight size={14} />
           </button>
